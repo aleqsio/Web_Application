@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<menu-pane></menu-pane>
+<form name="myForm" ng-controller="ExampleController">
+<div *ngFor="let item of items | async">
+<input type="text" name="input" ng-model="item" required ng-trim="false">
+</div>
+</form>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{ item | json }}
+  </li>
+</ul>
